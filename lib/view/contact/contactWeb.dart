@@ -111,7 +111,7 @@ class _ContactWebState extends ConsumerState<ContactWeb> {
           Column(
             children: [
               Text(
-                '''Built & Developed by Jeevanandham''',
+                '''Developed & Developed by Ritesh Agrawal''',
                 style: TextStyle(
                   color: AppColors().textColor,
                   fontSize: 12,

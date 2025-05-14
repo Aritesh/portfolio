@@ -29,12 +29,20 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '''04.''',
-                    style: TextStyle(color: AppColors().neonColor, fontSize: 14, fontFamily: 'sfmono'),
+                    '''05.''',
+                    style: TextStyle(
+                      color: AppColors().neonColor,
+                      fontSize: 14,
+                      fontFamily: 'sfmono',
+                    ),
                   ),
                   Text(
                     ''' What's next?''',
-                    style: TextStyle(color: AppColors().neonColor, fontSize: 16, fontFamily: 'sfmono'),
+                    style: TextStyle(
+                      color: AppColors().neonColor,
+                      fontSize: 16,
+                      fontFamily: 'sfmono',
+                    ),
                   ),
                 ],
               ),
@@ -75,30 +83,54 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                   child: Container(
                     height: AppClass().getMqHeight(context) * 0.09,
                     width: AppClass().getMqWidth(context) * 0.15,
-                    decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.all(Radius.circular(3.0)), border: Border.all(color: AppColors().neonColor, width: 1.5)),
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      borderRadius: BorderRadius.all(Radius.circular(3.0)),
+                      border: Border.all(
+                        color: AppColors().neonColor,
+                        width: 1.5,
+                      ),
+                    ),
                     child: Center(
-                      child: Text('Say Hello!', style: TextStyle(color: AppColors().neonColor, fontSize: 13, letterSpacing: 1, fontWeight: FontWeight.bold, fontFamily: 'sfmono')),
+                      child: Text(
+                        'Say Hello!',
+                        style: TextStyle(
+                          color: AppColors().neonColor,
+                          fontSize: 13,
+                          letterSpacing: 1,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'sfmono',
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
           Column(
             children: [
               Text(
-                '''Built & Developed by Jeevanandham''',
-                style: TextStyle(color: AppColors().textColor, fontSize: 12, fontFamily: 'sfmono'),
+                '''Developed & Built by Ritesh Agrawal''',
+                style: TextStyle(
+                  color: AppColors().textColor,
+                  fontSize: 12,
+                  fontFamily: 'sfmono',
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   '''ref - Britney C''',
-                  style: TextStyle(color: AppColors().neonColor, fontSize: 12, fontFamily: 'sfmono'),
+                  style: TextStyle(
+                    color: AppColors().neonColor,
+                    fontSize: 12,
+                    fontFamily: 'sfmono',
+                  ),
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );
@@ -112,15 +144,27 @@ class _ContactTabState extends ConsumerState<ContactTab> {
     final _formKey = GlobalKey<FormState>();
 
     showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (_) => AlertDialog(
-              backgroundColor: AppColors().primaryColor,
-              titleTextStyle: TextStyle(color: AppColors().neonColor, fontSize: 18, fontFamily: 'sfmono'),
-              title: Row(
-                children: [Expanded(flex: 9, child: Text('Contact Me!')), IconButton(onPressed: () => Navigator.pop(context), icon: Icon(Icons.close, color: AppColors().textColor))],
-              ),
-              content: Consumer(builder: (context, ref, child) {
+      context: context,
+      barrierDismissible: false,
+      builder:
+          (_) => AlertDialog(
+            backgroundColor: AppColors().primaryColor,
+            titleTextStyle: TextStyle(
+              color: AppColors().neonColor,
+              fontSize: 18,
+              fontFamily: 'sfmono',
+            ),
+            title: Row(
+              children: [
+                Expanded(flex: 9, child: Text('Contact Me!')),
+                IconButton(
+                  onPressed: () => Navigator.pop(context),
+                  icon: Icon(Icons.close, color: AppColors().textColor),
+                ),
+              ],
+            ),
+            content: Consumer(
+              builder: (context, ref, child) {
                 bool isLoading = ref.watch(progressProvider);
                 return Stack(
                   children: [
@@ -143,11 +187,23 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                               },
                               decoration: InputDecoration(
                                 hintText: 'Name*',
-                                errorStyle: TextStyle(color: AppColors().neonColor),
-                                errorBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors().neonColor)),
-                                enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                                border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                                errorStyle: TextStyle(
+                                  color: AppColors().neonColor,
+                                ),
+                                errorBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: AppColors().neonColor,
+                                  ),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                ),
+                                border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white),
+                                ),
                               ),
                             ),
                             Padding(
@@ -156,9 +212,15 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                                 controller: contactInfoController,
                                 decoration: InputDecoration(
                                   hintText: 'Contact Info (Optional)',
-                                  enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                                  focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                                  border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
                                 ),
                               ),
                             ),
@@ -175,11 +237,23 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                                 },
                                 decoration: InputDecoration(
                                   hintText: 'Message*',
-                                  errorStyle: TextStyle(color: AppColors().neonColor),
-                                  errorBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors().neonColor)),
-                                  enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                                  focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
-                                  border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+                                  errorStyle: TextStyle(
+                                    color: AppColors().neonColor,
+                                  ),
+                                  errorBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: AppColors().neonColor,
+                                    ),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
+                                  border: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
                                 ),
                               ),
                             ),
@@ -189,7 +263,11 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                                 children: [
                                   Text(
                                     "Note: Please don't send trash msgs, atleast say hi :(",
-                                    style: TextStyle(fontSize: AppClass().getMqWidth(context) * 0.02, color: Colors.grey),
+                                    style: TextStyle(
+                                      fontSize:
+                                          AppClass().getMqWidth(context) * 0.02,
+                                      color: Colors.grey,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -204,29 +282,72 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                                     child: InkWell(
                                       onTap: () async {
                                         if (_formKey.currentState!.validate()) {
-                                          ref.read(progressProvider.notifier).state = true;
-                                          AppClass().sendEmail(nameController.text, contactInfoController.text, msgController.text).then((value) {
-                                            if (value) {
-                                              Navigator.pop(context);
-                                              AppClass().showSnackBar('Message sent successfully', context: context);
-                                            } else {
-                                              Navigator.pop(context);
-                                              AppClass().showSnackBar('Failed to send message, please try again later.', context: context);
-                                            }
-                                            ref.read(progressProvider.notifier).state = false;
-                                          }).onError((error, stackTrace) {
-                                            Navigator.pop(context);
-                                            AppClass().showSnackBar('Error Occurred', context: context);
-                                          });
+                                          ref
+                                              .read(progressProvider.notifier)
+                                              .state = true;
+                                          AppClass()
+                                              .sendEmail(
+                                                nameController.text,
+                                                contactInfoController.text,
+                                                msgController.text,
+                                              )
+                                              .then((value) {
+                                                if (value) {
+                                                  Navigator.pop(context);
+                                                  AppClass().showSnackBar(
+                                                    'Message sent successfully',
+                                                    context: context,
+                                                  );
+                                                } else {
+                                                  Navigator.pop(context);
+                                                  AppClass().showSnackBar(
+                                                    'Failed to send message, please try again later.',
+                                                    context: context,
+                                                  );
+                                                }
+                                                ref
+                                                    .read(
+                                                      progressProvider.notifier,
+                                                    )
+                                                    .state = false;
+                                              })
+                                              .onError((error, stackTrace) {
+                                                Navigator.pop(context);
+                                                AppClass().showSnackBar(
+                                                  'Error Occurred',
+                                                  context: context,
+                                                );
+                                              });
                                         }
                                       },
                                       child: Container(
-                                        height: AppClass().getMqHeight(context) * 0.06,
-                                        width: AppClass().getMqWidth(context) * 0.2,
+                                        height:
+                                            AppClass().getMqHeight(context) *
+                                            0.06,
+                                        width:
+                                            AppClass().getMqWidth(context) *
+                                            0.2,
                                         decoration: BoxDecoration(
-                                            color: Colors.transparent, borderRadius: BorderRadius.all(Radius.circular(3.0)), border: Border.all(color: AppColors().neonColor, width: 1.5)),
+                                          color: Colors.transparent,
+                                          borderRadius: BorderRadius.all(
+                                            Radius.circular(3.0),
+                                          ),
+                                          border: Border.all(
+                                            color: AppColors().neonColor,
+                                            width: 1.5,
+                                          ),
+                                        ),
                                         child: Center(
-                                          child: Text('Send', style: TextStyle(color: AppColors().neonColor, fontSize: 13, letterSpacing: 1, fontWeight: FontWeight.bold, fontFamily: 'sfmono')),
+                                          child: Text(
+                                            'Send',
+                                            style: TextStyle(
+                                              color: AppColors().neonColor,
+                                              fontSize: 13,
+                                              letterSpacing: 1,
+                                              fontWeight: FontWeight.bold,
+                                              fontFamily: 'sfmono',
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -241,14 +362,21 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                     Visibility(
                       visible: isLoading,
                       child: Container(
-                          width: AppClass().getMqWidth(context) * 0.5,
-                          height: AppClass().getMqHeight(context) * 0.7,
-                          color: Colors.transparent,
-                          child: Center(child: CircularProgressIndicator(color: AppColors().neonColor))),
+                        width: AppClass().getMqWidth(context) * 0.5,
+                        height: AppClass().getMqHeight(context) * 0.7,
+                        color: Colors.transparent,
+                        child: Center(
+                          child: CircularProgressIndicator(
+                            color: AppColors().neonColor,
+                          ),
+                        ),
+                      ),
                     ),
                   ],
                 );
-              }),
-            ));
+              },
+            ),
+          ),
+    );
   }
 }
