@@ -16,8 +16,8 @@ class AppTheme extends StatelessWidget {
       title: 'Ritesh Agrawal',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark,
         primaryColor: AppColors().primaryColor,
+        brightness: Brightness.dark,
       ),
       home: const RootScreen(),
     );
