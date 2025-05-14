@@ -337,7 +337,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                               String state = ref.watch(hoverProvider);
                               bool isHovered = (state == "gameTitle");
                               return Text(
-                                "Games",
+                                "packages",
                                 style: TextStyle(
                                   color:
                                       isHovered
