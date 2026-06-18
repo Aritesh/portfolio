@@ -32,7 +32,7 @@ class _RightPaneState extends State<RightPane> {
                         style: TextStyle(
                           letterSpacing: 1,
                           color: AppColors().textColor,
-                          fontSize: 14,
+                          fontSize: 16,
                           fontFamily: 'sfmono',
                         ),
                       ),

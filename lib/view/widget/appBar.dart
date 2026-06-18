@@ -43,6 +43,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                     children: [
                       PopupMenuButton(
                         color: AppColors().cardColor,
+
                         itemBuilder:
                             (c) => <PopupMenuEntry>[
                               PopupMenuItem(
@@ -337,7 +338,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                               String state = ref.watch(hoverProvider);
                               bool isHovered = (state == "gameTitle");
                               return Text(
-                                "packages",
+                                "Packages",
                                 style: TextStyle(
                                   color:
                                       isHovered

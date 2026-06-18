@@ -13,8 +13,10 @@ class AppClass {
 
   /* URL */
   static final resumeDownloadURL =
-      '''https://drive.google.com/file/d/1Dlh7duDY6QZmOX4INTWrZln6IHjaM-QM/view?usp=sharing''';
+      '''https://drive.google.com/file/d/1TvMSNVLNJk__MeqIfaje4hLxu5CzVedC/view?usp=sharing''';
 
+  // static final resumeDownloadURL =
+  // '''https://drive.google.com/file/d/1Dlh7duDY6QZmOX4INTWrZln6IHjaM-QM/view?usp=sharing''';
   static final gitSafeC19 = '''https://github.com/jeeva-HBK/SafeC19''';
 
   // static final gitHermarts = '''https://github.com/jeeva-HBK/SafeC19''';
@@ -27,18 +29,26 @@ class AppClass {
 
   List<WorkModel> projectList = [
     WorkModel(
+      projectTitle: "Ajman Bank One",
+      projectContent:
+          "Contributed to the development and enhancement of Ajman Bank's secure mobile banking application, enabling customers to manage accounts, transfer funds, pay bills, manage beneficiaries, access card services, and apply for banking products. Implemented scalable Flutter solutions, secure authentication (Biometric Login), API integrations, and performance optimizations to deliver a seamless banking experience for Android and iOS users.",
+      tech1: "Flutter",
+      tech2: "Android,IOS",
+      tech3: "Clean architecture",
+    ),
+    WorkModel(
       projectTitle: "Selfe Loans",
       projectContent:
           "Hassle-free gateway to a spectrum of financial solutions. Seamlessly access a range of loan offerings, including home loans, loan against property, car loans (both new and used), commercial vehicle finance (new and used), merchant overdraft, gold loans, microfinance and personal loan. This platform ensures a convenient and straightforward process, making it easier than ever to address your financial needs with precision and efficiency. Experience the simplicity of securing the right loan for you with SelfeLoans.",
-      tech1: "Flutter",
+      tech1: "Flutter, Dart",
       tech2: "Android,IOS",
-      tech3: "Web (DPL)",
+      tech3: "MVVM",
     ),
     WorkModel(
       projectTitle: "Source.One Buyer App",
       projectContent:
           "Developed a one-stop polymer procurement solution allowing users to select location, polymer type, process technique, and explore offers.",
-      tech1: "Flutter",
+      tech1: "Flutter, ",
       tech2: "Android,IOS",
       tech3: "Firebase",
     ),

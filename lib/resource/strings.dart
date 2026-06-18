@@ -3,16 +3,16 @@ class Strings {
   static final welcomeTxt = '''Hi, my name is''';
   static final name = '''Ritesh Agrawal.'''; // add . at the end
   static final whatIdo =
-      '''I craft scalable and high-performance mobile and web apps using Flutter.'''; // add . at the end
+      '''I craft scalable and high-performance and secure mobile and web apps using Flutter.'''; // add . at the end
   static final introAbout =
       '''I am a Sr. Software Engineer, leading teams and architecting secure, high-performance Flutter applications built for scale and reliability.''';
   // static final currentOrgName = '''NetAccess.'''; // add . at the end
   static final currentOrgName = '''''';
   /* About screen contents */
   static final aboutPara1 =
-      '''Hello! I'm Ritesh — a Sr. Software Engineer with 6 years of experience in building and deploying mobile and web applications. What started as curiosity evolved into a deep passion for crafting secure, high-performance digital products.''';
+      '''Hello! I'm Ritesh — a Sr. Software Engineer with 6.5 years of experience in building and deploying mobile and web applications. What started as curiosity evolved into a deep passion for crafting secure, high-performance digital products.''';
   static final aboutPara2 =
-      '''Throughout my journey, I’ve developed and delivered 20+ applications across fintech, banking, and enterprise domains. I specialize in designing scalable, maintainable software architectures using Flutter and Clean Architecture principles. With 3 years of team lead experience, I drive development processes, mentor engineers, and foster strong engineering culture. My expertise spans API encryption, SSL planning, jailbreak/root detection, and creating custom Flutter packages to enhance modularity and performance.''';
+      '''Throughout my journey, I’ve developed and delivered 20+ applications across fintech, banking, and enterprise domains. I specialize in designing scalable, maintainable software architectures using Flutter and Clean Architecture principles. With 3.5 years of team lead experience, I drive development processes, mentor engineers, and foster strong engineering culture. My expertise spans API encryption, SSL planning, jailbreak/root detection, and creating custom Flutter packages to enhance modularity and performance.''';
 
   static final aboutPara3 =
       '''I’m passionate about building secure, scalable, and user-friendly cross-platform applications. If you have a project that needs expert hands—especially in secure mobile development—feel free to reach out!''';
@@ -22,9 +22,26 @@ class Strings {
   static final tech2 = ''' Dart'''; // space for manual padding
   static final tech3 = ''' Firebase'''; // space for manual padding
   static final tech4 = ''' CI/CD'''; // space for manual padding
-  static final tech5 = ''' Git''';
+  static final tech5 = ''' BLoC''';
+  static final tech6 = ''' Provider''';
+  static final tech7 = ''' REST APIs''';
+  static final tech8 = ''' Secure Storage''';
+  static final tech9 = ''' API encryption''';
+  static final tech10 = ''' Git''';
 
   /* Exp screen contents */
+
+  static final expCompName4 =
+      '''Primus Global (Contract Role Onsite – Accenture Client)''';
+  static final expDesig4 = '''Senior Software Engineer''';
+  static final expDur4 = '''''';
+  static final expAbout4 =
+      '''Primus Global is a technology consulting and staffing company providing skilled professionals and digital solutions to leading enterprises across various industries .''';
+  static final expAbout4_2 =
+      '''Working as a Senior Flutter Developer on an onsite contract assignment for Accenture, contributing to enterprise-grade mobile application development using Flutter, Dart, and Clean Architecture principles. Developing scalable, secure, and high-performance applications aligned with client business requirements .''';
+  static final expAbout4_3 =
+      '''Collaborated with cross-functional teams including product owners, backend engineers, QA, and business stakeholders to deliver secure financial features, optimize application performance, ensure regulatory compliance, and maintain high standards of code quality within an agile environment .''';
+
   static final expCompName3 = '''source.one''';
   static final expDesig3 = '''Senior Software Engineer''';
   static final expDur3 = '''''';

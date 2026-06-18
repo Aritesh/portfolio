@@ -20,6 +20,100 @@ class _ExperienceWebState extends State<ExperienceWeb> {
   Widget build(BuildContext context) {
     List<ExperienceModel> experienceList = [
       ExperienceModel(
+        desig: Strings.expDesig4,
+        compName: Strings.expCompName4,
+        duration: Strings.expDur4,
+        points: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 5.0),
+                    child: Icon(
+                      Icons.arrow_right,
+                      color: AppColors().neonColor,
+                      size: 20,
+                    ),
+                  ),
+                  Container(
+                    width: AppClass().getMqWidth(context) * 0.35,
+                    child: Text(
+                      Strings.expAbout4,
+                      style: TextStyle(
+                        color: AppColors().textLight,
+                        letterSpacing: 1,
+                        height: 1.5,
+                        fontSize: 14,
+                        fontFamily: 'sfmono',
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 5.0),
+                    child: Icon(
+                      Icons.arrow_right,
+                      color: AppColors().neonColor,
+                      size: 20,
+                    ),
+                  ),
+                  Container(
+                    width: AppClass().getMqWidth(context) * 0.35,
+                    child: Text(
+                      Strings.expAbout4_2,
+                      style: TextStyle(
+                        color: AppColors().textLight,
+                        letterSpacing: 1,
+                        height: 1.5,
+                        fontSize: 14,
+                        fontFamily: 'sfmono',
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 5.0),
+                    child: Icon(
+                      Icons.arrow_right,
+                      color: AppColors().neonColor,
+                      size: 20,
+                    ),
+                  ),
+                  Container(
+                    width: AppClass().getMqWidth(context) * 0.35,
+                    child: Text(
+                      Strings.expAbout4_3,
+                      style: TextStyle(
+                        color: AppColors().textLight,
+                        letterSpacing: 1,
+                        height: 1.5,
+                        fontSize: 14,
+                        fontFamily: 'sfmono',
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+
+      ExperienceModel(
         desig: Strings.expDesig3,
         compName: Strings.expCompName3,
         duration: Strings.expDur3,
@@ -374,7 +468,7 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                                 ),
                               ),
                               child: Text(
-                                'Source.one',
+                                'PRIMUS Global (Accenture Client)',
                                 style: TextStyle(
                                   color:
                                       data == 0
@@ -410,7 +504,7 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                                 ),
                               ),
                               child: Text(
-                                'Winjit',
+                                'Source.one',
                                 style: TextStyle(
                                   color:
                                       data == 1
@@ -446,10 +540,46 @@ class _ExperienceWebState extends State<ExperienceWeb> {
                                 ),
                               ),
                               child: Text(
-                                'Samcom',
+                                'Winjit',
                                 style: TextStyle(
                                   color:
                                       data == 2
+                                          ? AppColors().neonColor
+                                          : AppColors().textLight,
+                                  letterSpacing: 1,
+                                  height: 1.5,
+                                  fontSize: 14,
+                                  fontFamily: 'sfmono',
+                                ),
+                              ),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              ref.read(selectedExpProvider.notifier).state = 3;
+                            },
+                            child: Container(
+                              padding: EdgeInsets.all(10.0),
+                              decoration: BoxDecoration(
+                                color:
+                                    data == 3
+                                        ? AppColors().cardColor
+                                        : Colors.transparent,
+                                border: Border(
+                                  left: BorderSide(
+                                    color:
+                                        data == 3
+                                            ? AppColors().neonColor
+                                            : Colors.white,
+                                    width: 2,
+                                  ),
+                                ),
+                              ),
+                              child: Text(
+                                'Samcom',
+                                style: TextStyle(
+                                  color:
+                                      data == 3
                                           ? AppColors().neonColor
                                           : AppColors().textLight,
                                   letterSpacing: 1,

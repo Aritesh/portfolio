@@ -89,6 +89,16 @@ class _WorkWebState extends ConsumerState<WorkWeb> {
                 mainAxisCellCount: 1,
                 child: getTile(index: 5),
               ),
+              StaggeredGridTile.count(
+                crossAxisCellCount: 1,
+                mainAxisCellCount: 1,
+                child: getTile(index: 6),
+              ),
+              StaggeredGridTile.count(
+                crossAxisCellCount: 1,
+                mainAxisCellCount: 1,
+                child: getTile(index: 7),
+              ),
             ],
           ),
         ),

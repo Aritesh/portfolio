@@ -191,6 +191,76 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                               ),
                             ],
                           ),
+                          Row(
+                            children: [
+                              Icon(Icons.arrow_right),
+                              Text(
+                                Strings.tech6,
+                                style: GoogleFonts.robotoFlex(
+                                  color: AppColors().textLight,
+                                  letterSpacing: 1,
+                                  height: 1.5,
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Icon(Icons.arrow_right),
+                              Text(
+                                Strings.tech7,
+                                style: GoogleFonts.robotoFlex(
+                                  color: AppColors().textLight,
+                                  letterSpacing: 1,
+                                  height: 1.5,
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Icon(Icons.arrow_right),
+                              Text(
+                                Strings.tech8,
+                                style: GoogleFonts.robotoFlex(
+                                  color: AppColors().textLight,
+                                  letterSpacing: 1,
+                                  height: 1.5,
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Icon(Icons.arrow_right),
+                              Text(
+                                Strings.tech9,
+                                style: GoogleFonts.robotoFlex(
+                                  color: AppColors().textLight,
+                                  letterSpacing: 1,
+                                  height: 1.5,
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Icon(Icons.arrow_right),
+                              Text(
+                                Strings.tech10,
+                                style: GoogleFonts.robotoFlex(
+                                  color: AppColors().textLight,
+                                  letterSpacing: 1,
+                                  height: 1.5,
+                                  fontSize: 17,
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
