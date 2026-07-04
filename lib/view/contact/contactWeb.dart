@@ -286,7 +286,7 @@ class _ContactWebState extends ConsumerState<ContactWeb> {
                                               .read(progressProvider.notifier)
                                               .state = true;
                                           AppClass()
-                                              .sendEmail(
+                                              .sendEmailjs(
                                                 nameController.text,
                                                 contactInfoController.text,
                                                 msgController.text,

@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:portfolio/model/experienceModel.dart';
 import 'package:portfolio/resource/styles.dart';
@@ -162,6 +165,9 @@ class AppClass {
   }
 
   Future<bool> sendEmail(name, contact, msg) async {
+    //Service ID: service_01dvedq
+    // template_5zk0syg
+    //tqv1YxoX6_PcQk8Z_
     var url = Uri.https('hbk-portfolio-mailer.web.app', '/sendMail');
     var response = await post(
       url,
@@ -169,5 +175,40 @@ class AppClass {
     ).timeout(Duration(seconds: 10));
     print(response.body);
     return response.statusCode == 200;
+  }
+
+  Future<bool> sendEmailjs(String name, String contact, String msg) async {
+    // EmailJS का ऑफिशियल API एंडपॉइंट
+    var url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+
+    try {
+      var response = await http
+          .post(
+            url,
+            headers: {
+              'origin': 'http://localhost', // Flutter Web के लिए जरूरी है
+              'Content-Type': 'application/json',
+            },
+            body: jsonEncode({
+              'service_id': 'service_01dvedq', // अपनी Service ID यहाँ डालें
+              'template_id': 'template_5zk0syg', // अपनी Template ID यहाँ डालें
+              'user_id': 'tqv1YxoX6_PcQk8Z_', // अपनी Public Key यहाँ डालें
+              'template_params': {
+                'name': name,
+                'contactInfo': contact,
+                'message': msg,
+              },
+            }),
+          )
+          .timeout(Duration(seconds: 10));
+
+      print("Status: ${response.statusCode}");
+      print("Response: ${response.body}");
+
+      return response.statusCode == 200;
+    } catch (e) {
+      print("$e");
+      return false;
+    }
   }
 }
